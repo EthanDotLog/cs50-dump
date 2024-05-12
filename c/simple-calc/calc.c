@@ -4,37 +4,44 @@
 int add(int x, int y);
 int sub(int x, int y);
 int mul(int x, int y);
-int div(int x, int y);
+float div(int x, int y);
+string doMaths();
 
 int main(void)
 {
-  int x = get_int("x: ");
-  char operator = get_char("operator(+, -, *, /): ");
-  int y = get_int("y: ");
-  int z;
+  printf("EthanDotLog's Calculator\n");
+  printf("I can do addition, subtraction, multiplication, and division. Just enter the numbers and an operation (when prompted) and I'll do it for you. \n");
+  printf("Get ready, and remember don't be a cunt...\n");
+  char doMath = 'y';
+  while (doMath == 'y' || doMath == 'Y')
+  {
+    doMaths();
+    doMath = get_char("Do you want to do another calculation? (y/n): ");
+  }
+  printf("Bye! I hope you don't get stabbed for bad math by not using my calculator. sincerely, EthanDotLog\n");
+}
 
-  if (operator == '+')
+string doMaths()
+{
+  int x = get_int("what is x: ");
+  char op = get_char("What kind of maths? ((!ONLY!) +, -, *, /): ");
+  int y = get_int("what is y: ");
+  if (op == '+')
   {
-    z = add(x, y);
+    printf("%i + %i = %i\n", x, y, add(x, y));
   }
-  else if (operator == '-')
+  else if (op == '-')
   {
-    z = sub(x, y);
+    printf("%i - %i = %i\n", x, y, sub(x, y));
   }
-  else if (operator == '*')
+  else if (op == '*')
   {
-    z = mul(x, y);
+    printf("%i * %i = %i\n", x, y, mul(x, y));
   }
-  else if (operator == '/')
+  else if (op == '/')
   {
-    z = div(x, y);
+    printf("%i / %i = %f\n", x, y, div(x, y));
   }
-  else
-  {
-    printf("Invalid operator\n");
-  }
-
-  printf("%i %c %i = %i\n", x, operator, y, z);
 }
 
 int add(int x, int y)
@@ -52,8 +59,8 @@ int mul(int x, int y)
   return x * y;
 }
 
-int div(int x, int y)
+float div(int x, int y)
 {
-  int z = x / y;
-  return x / y;
+  float z = (float) x / (float) y;
+  return z;
 }
