@@ -1,0 +1,47 @@
+sort1 uses: TODO
+
+How do you know?: TODO
+
+sort2 uses: TODO
+
+How do you know?: TODO
+
+sort3 uses: TODO
+
+How do you know?: TODO
+
+
+
+
+sort1
+rand5000     .132
+rand10000    .531
+rand50000  11.4
+rev5000      .191
+rev10000     .480
+rev50000   15.701
+sort5000     .061
+sort10000    .061
+sort50000    .84
+
+sort2
+rand5000     .073
+rand10000    .123
+rand50000    .732
+rev5000      .078
+rev10000     .101
+rev50000     .807
+sort5000     .068
+sort10000    .125
+sort50000    .879
+
+sort3
+rand5000     .086
+rand10000    .347
+rand50000   7.539
+rev5000      .124
+rev10000     .277
+rev50000    6.165
+sort5000     .129
+sort10000    .298
+sort50000   7.091
